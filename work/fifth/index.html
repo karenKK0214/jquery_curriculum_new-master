@@ -89,10 +89,6 @@
         $('.select').change(function() {
           let selected = $('.select').val();
 
-          // 選択した「」に関連する「」を表示させ、そうでない「」は非表示にする
-          // 選択したセレクトボックスの「value」と「」が同じ「.list内のli」を表示させ、そうでない「.list内のli」は非表示にする
-          // 選択したセレクトボックスの「value」と「data-category-type」が同じ「.list内のli」を表示させ、そうでない「.list内のli」は非表示にする
-
           $('.list').children('li').each(function(index, element){
             let type = $(element).data('category-type');
 
@@ -107,9 +103,7 @@
         });
 
       });
-
-
-
+      
       // 今回やるのはフィルタリング機能です。
       // selectボックスをクリックして言語を選び、その言語と関係のあるリストだけが表示されるプログラムです。
       // [処理の流れ]

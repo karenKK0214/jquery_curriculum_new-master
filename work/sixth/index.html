@@ -17,9 +17,6 @@
   <script>
     // 回答はここに書いてね
     $(function() {
-// ますはボタンを押したら反応するかconsoleして確認、その中にポケモンの情報を取得するコードを入力、aJaxメソッドを使う、フシギダネのURL使用、URLゲットリクエストをするにはどうしたらいいか、名前を表示させる、ランダムでポケモンを出す、ボタンを押したら50％の確率で出す
-      // $(Document).on('click', クリックの対象, function~~~~~);
-
        $(Document).on('click', '#pokemon_search', function() {
 
         let randomId = Math.floor( Math.random() * 151) + 1;
@@ -48,7 +45,6 @@
 
           $('.img').attr('src',res.sprites.front_default);
 
-          // ajaxを使ってこの中にある情報をもう一度取得する必要がある
           $.ajax({
             url: res.species.url,
             method: 'GET'
@@ -107,7 +103,6 @@
         });
        });
     });
-
 
   </script>
 </body>
